@@ -3,7 +3,7 @@
 |-----|--------------------|-----------------|
 | 1   | Hứa Hồ Gia Huy      | 21522143        |
 | 2   | Quách Minh Huy      | 21522164        |
-| 3   | Nguyễn Hoàng Diệp Phi|  |
+| 3   | Nguyễn Hoàng Diệp Phi|21522453  |
 
 # Script chạy source code : #
 
