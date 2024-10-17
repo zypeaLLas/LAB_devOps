@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func InstanceExistTest(t *testing.T) {
+func EC2ExistTest(t *testing.T) {
 	terraformOptions := &terraform.Options{
 		TerraformDir: "../",
 	}
