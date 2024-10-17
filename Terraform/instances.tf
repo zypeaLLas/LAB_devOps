@@ -21,3 +21,5 @@ resource "aws_instance" "private_ec2" {
     Name = "private_ec2_instance"
   }
 }
+
+
