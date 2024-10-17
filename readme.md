@@ -19,7 +19,7 @@ terraform init -> terraform fmt -> terraform validate -> terraform plan -> terra
 - Mở termninal trong thư mục test, run `go test -v`
 
 ## Kết quả
-![Test](https://drive.google.com/thumbnail?id=1rhkWTQnex8tCd6K1uwuTCnQCeOxiMQWf)
+![Test](https://drive.google.com/thumbnail?id=1rhkWTQnex8tCd6K1uwuTCnQCeOxiMQWf){: width="600px"}
 
 
 
