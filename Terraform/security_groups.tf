@@ -29,7 +29,7 @@ resource "aws_security_group" "private_ec2_sg" {
     from_port       = 22
     to_port         = 22
     protocol        = "tcp"
-    cirdr_blocks =[aws_instance.public_ec2.public_ip] #chỉ cho public ec2 truy cập vào 
+    cidr_blocks =[aws_instance.public_ec2.public_ip] #chỉ cho public ec2 truy cập vào 
   }
 
   egress {
