@@ -15,6 +15,20 @@ resource "aws_internet_gateway" "igw" {
     Name = "my_igw"
   }
 }
+# Tạo Elastic IP cho NAT Gateway
+resource "aws_eip" "my_nat_eip" {
+  vpc = true
+}
+
+# Tạo NAT Gateway
+resource "aws_nat_gateway" "my_nat_gateway" {
+  allocation_id = aws_eip.my_nat_eip.id
+  subnet_id     = aws_subnet.public_subnet.id
+
+  tags = {
+    Name = "my_nat_gateway"
+  }
+}
 
 # Tạo Public Subnet
 resource "aws_subnet" "public_subnet" {
@@ -62,7 +76,7 @@ resource "aws_route_table" "private_route_table" {
   vpc_id = aws_vpc.main_vpc.id
 
   route {
-    # Định tuyến lưu lượng Internet thông qua NAT Gateway (sẽ tạo sau)
+    # Định tuyến lưu lượng Internet thông qua NAT Gateway
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.my_nat_gateway.id
   }
@@ -73,20 +87,8 @@ resource "aws_route_table" "private_route_table" {
 }
 
 
-# Tạo Elastic IP cho NAT Gateway
-resource "aws_eip" "my_nat_eip" {
-  vpc = true
-}
 
-# Tạo NAT Gateway
-resource "aws_nat_gateway" "my_nat_gateway" {
-  allocation_id = aws_eip.my_nat_eip.id
-  subnet_id     = aws_subnet.public_subnet.id
 
-  tags = {
-    Name = "my_nat_gateway"
-  }
-}
 
 # Gán Route Table cho Public Subnet
 resource "aws_route_table_association" "public_route_table_association" {
