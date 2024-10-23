@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "igw" {
 }
 # Tạo Elastic IP cho NAT Gateway
 resource "aws_eip" "my_nat_eip" {
-  vpc = true
+  domain = "vpc"  # Thay thế vpc = true bằng domain = "vpc"
 }
 
 # Tạo NAT Gateway
