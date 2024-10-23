@@ -63,7 +63,7 @@ resource "aws_route_table" "private_route_table" {
 
   route {
     # Định tuyến lưu lượng Internet thông qua NAT Gateway (sẽ tạo sau)
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.my_nat_gateway.id
   }
 
@@ -81,7 +81,7 @@ resource "aws_eip" "my_nat_eip" {
 # Tạo NAT Gateway
 resource "aws_nat_gateway" "my_nat_gateway" {
   allocation_id = aws_eip.my_nat_eip.id
-  subnet_id    = aws_subnet.public_subnet.id
+  subnet_id     = aws_subnet.public_subnet.id
 
   tags = {
     Name = "my_nat_gateway"

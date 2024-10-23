@@ -11,5 +11,5 @@ variable "private_subnet_cidr" {
 }
 
 variable "ami_id" {
-  default = "ami-0f71013b2c8bd2c29"
+  default = "ami-001f2488b35ca8aad"
 }
