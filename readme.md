@@ -15,6 +15,9 @@
 
 # Triển khai dùng cloudformation #
  - upload file yaml lên aws cloudformation -> add a tag Name -> Next triển khai
+ - Có thể chỉnh sửa cloudformation file dùng cloudformation infrastructure composer
+ - Sơ đồ cloudformation stack : 
+   ![image](https://github.com/user-attachments/assets/2b3bdf82-e588-457e-8f71-34313599b07a)
 
 # Testing
 
