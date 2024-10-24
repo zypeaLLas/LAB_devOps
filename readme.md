@@ -9,9 +9,12 @@
    - Trên terminal nhập : `aws configure` 
     rồi cung cấp access + secret key 
 - Sử dụng mail giảng viên hướng dẫn được cấp quyền mới truy cập được file credentials : https://drive.google.com/file/d/1YLf-f6ByiCqeqF4T0g3E9m-8-4EXBeKi/view?usp=drive_link 
-# Script chạy source code : #
+# Script chạy source code terraform: #
 
 `terraform init -> terraform fmt -> terraform validate -> terraform plan -> terraform apply -> yes`
+
+# Triển khai dùng cloudformation #
+ - upload file yaml lên aws cloudformation -> add a tag Name -> Next triển khai
 
 # Testing
 
