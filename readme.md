@@ -5,9 +5,13 @@
 | 2   | Quách Minh Huy      | 21522164        |
 | 3   | Nguyễn Hoàng Diệp Phi|21522453  |
 
+# Trước khi chạy source cần cấu hình aws credentials : #
+   - Trên terminal nhập : `aws configure` 
+    rồi cung cấp access + secret key 
+- Sử dụng mail giảng viên hướng dẫn được cấp quyền mới truy cập được file credentials : https://drive.google.com/file/d/1YLf-f6ByiCqeqF4T0g3E9m-8-4EXBeKi/view?usp=drive_link 
 # Script chạy source code : #
 
-terraform init -> terraform fmt -> terraform validate -> terraform plan -> terraform apply -> yes
+`terraform init -> terraform fmt -> terraform validate -> terraform plan -> terraform apply -> yes`
 
 # Testing
 
